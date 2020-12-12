@@ -1,3 +1,73 @@
 page-home {
-
+    .signp
+    {
+      //  color: #fff;
+        font-size: 2rem;
+        margin-top: 3px;
+        display:flex;
+        
+        font-weight: bold;
+        
+      //  margin-left: 19px;
+    }
+    .error-text{
+        color: red;
+        margin-left: 13px;
+        font-weight: bold;
+    }
+    .icon-view
+    {
+        font-size: 1.9rem;
+      
+      //  color: #fff;
+    }
+    .item-ios{
+      background-color:transparent;   
+      --ion-background-color: #1f1e1e;
+    }
+    .item-view
+    {
+        --ion-background-color: transparent;
+        border-radius: 7px;
+    }
+    .wallpaper-image
+    {
+      background-image: url(../assets/imgs/dentist.jpg);  
+      
+        background-size: cover;
+        height:100%;padding: 15px; 
+         background-color: #fff;
+      
+    }
+    .forget-view
+    {
+        text-align: right;
+        //color: #fff;
+        width: 96%;
+        margin-top: 20px;
+    }
+    .input-box
+    {
+     
+        margin-top: 179px;
+        padding: 15px;
+        margin-left: -10px; 
+    }
+    .ion-butt
+    {
+        background-color: #3598DC;
+        width: 100%;
+        box-shadow: 0 10px 25px 0 rgba(0,0,0,.3);
+        border-radius: 7px;
+        box-shadow: 0 8px 10px 1px rgba(1,0,0,.14), 0 3px 14px 2px rgba(1,0,0,.12), 0 5px 5px -3px rgba(1,0,0,.2); 
+    }
+    .signupview
+    {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        left: 1px;
+    }
+    
 }

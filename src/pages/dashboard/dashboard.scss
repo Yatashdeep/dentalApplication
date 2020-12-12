@@ -1,0 +1,106 @@
+page-dashboard {
+    .icon-round{
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 76px;
+        width: 46%;
+        border-radius: 60px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 4.2rem;
+        color: #fff;
+        margin-top: 10px;
+    }
+    ion-card{
+        height: 165px;
+    }
+    .card-design{
+        background-color:#3598DC;
+        border-radius: 7px;
+       
+    }
+    .card-design1{
+        background-color: #E67D21;
+        border-radius: 7px;
+    }
+    .card-design2{
+        background-color: #8E44AD;
+        border-radius: 7px;
+    }
+    .card-design3{
+        background-color: #28A745;
+        border-radius: 7px;
+    }
+    .card-design4{
+        background-color: #FFC107;
+        border-radius: 7px;
+    }
+    .card-design5{
+        background-color: #8E44AD;
+        border-radius: 7px;
+    }
+    .card-design6{
+        background-color: #DC3545;
+        border-radius: 7px;
+    }
+    .card-design7{
+        background-color: #17A2B8;
+        border-radius: 7px;
+    }
+    .card-design8{
+        background-color: #17A2B8;
+        border-radius: 7px;
+    }
+  
+    .line-design{
+        height: 10px;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .line-design div{
+        height: 10px;
+        background-color: #fff;
+        width: 40%;
+    }
+    p{
+        color:#fff !important
+    }
+    .row-d{
+     //   padding: 5px;
+    }
+    .grid {
+        padding: 0px;
+    }
+    .col{
+        padding: 0px;
+    }
+    .icon-style{
+        display: flex;
+        justify-content: center;
+    }
+   
+   .heading-row{
+        margin-top: 7px;
+              text-align: start;
+              justify-content: center;
+              margin-bottom: 4px;
+    }
+    .total-head
+    {
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .line-style{
+        justify-content: center;
+    }
+
+}

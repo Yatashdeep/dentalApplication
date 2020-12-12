@@ -1,0 +1,136 @@
+<!--
+  Generated template for the DatedetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title >{{user_name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="loadingstatus==true" class="loading-style">
+   <img style="    margin-top: -84px;" src="assets/imgs/Box-Loading-2.gif">
+  </div>
+  <div class="box-dot">
+  <div class="dot-select">
+
+  </div>
+  </div>
+ 
+
+  <ion-slides (ionSlideDidChange)="slideChanged()"  slidesPerView="2.9">
+  
+  <ion-slide  *ngFor="let val of currentDates;let i =index">
+ 
+ <div class="date-data">
+   <div class="center-div">
+   <!-- <div class="event-signal"></div> -->
+   </div>
+     <p *ngIf="val.dateDay==0">Sun</p>
+     <p *ngIf="val.dateDay==1">Mon</p>
+     <p *ngIf="val.dateDay==2">Tue</p>
+     <p *ngIf="val.dateDay==3">Wed</p>
+     <p *ngIf="val.dateDay==4">Thu</p>
+     <p *ngIf="val.dateDay==5">Fri</p>
+     <p *ngIf="val.dateDay==6">Sat</p>
+
+    
+     <p>{{val.dateNo}}</p>
+   
+   </div>
+
+  </ion-slide>
+
+  </ion-slides>
+  <div class="display-date">
+    
+      <ion-datetime  [pickerOptions]="customPickerOptions"  displayFormat="DDDD MMMM D ,YYYY" pickerFormat="MM DD YYYY" (ionBlur)="parseDate()" [(ngModel)]="selecteddate"></ion-datetime>
+  </div>
+
+  <ion-row style="margin-bottom: 25px;" *ngIf="datastatus==true" >
+      <ion-col>
+          <p class="title-col">New Patients</p>
+          <p class="sub-title-col">{{newpatient}}</p>
+        </ion-col>
+        <ion-col>
+            <p class="title-col">Appointments</p>
+            <p class="sub-title-col">{{appointment}}</p>
+        </ion-col>
+    
+
+      <ion-col>
+      <p class="title-col">PTS/HRS</p>
+      <p class="sub-title-col">{{timeinmin | number : '1.2-2'}} hrs</p>
+    </ion-col>
+    </ion-row>
+    <ion-row *ngIf="datastatus==true"  >
+    <ion-col>
+        <p class="title-col">Scheduled</p>
+        <p class="sub-title-col">{{scheduled}}</p>
+    </ion-col>
+    <ion-col>
+      <p class="title-col">Goal</p>
+      <p class="sub-title-col"></p>
+    </ion-col>
+    <ion-col>
+        <p class="title-col">Unsched Tx</p>
+        <p class="sub-title-col">{{UnScheduleTx}}</p>
+    </ion-col>
+  </ion-row>
+
+  <hr>
+  <ion-list class="gap-list">
+  <ion-item-sliding *ngFor="let val of eventdates;let i=index">
+    <ion-item >
+  <ion-row  >
+    <ion-col col-4 style="margin-left: -5px;">
+       <p>{{val.apptStartTime}}</p>
+       <br>
+       <p style="    margin-top: -13px;">{{val.apptEndTime}}</p>
+    </ion-col>
+    <ion-col col-4 style="    justify-content: center;
+    display: flex;">
+         <div class="name-detail">
+           <p>SP</p>
+         </div>
+    </ion-col>
+    <ion-col (click)="navigatetoStats(i)" col-4 style="    margin-left: -79px;">
+        <p>Patient-Id:{{val.patid}}</p>
+        <p>Amount:{{val.appointmentType}}</p>
+        <p>Last 2BMW:{{val.LAST_2BW}}</p>
+        <p>Last 4BMW:{{val.LAST_4BW}}</p>
+        <p>Last FMX:{{val.LAST_FMX}}</p>
+       
+        <p style="color:lime" *ngIf="val.status=='-106'">Completed</p>
+        <p style="color:red" *ngIf="val.status=='6'">Left</p>
+        <p style="color:lime" *ngIf="val.status=='2'">Confirmed</p>
+        <p style="color:red" *ngIf="val.status=='10'">No</p>
+        <p  *ngIf="val.status=='0'  ">UnConfirmed</p>
+       
+
+    </ion-col>
+  </ion-row>
+  </ion-item>
+  <ion-item-options side="right">
+      <button style="    font-size: 10px;width:100px" ion-button>
+        Unsched Family:
+        <br>
+        {{val.UnscheduledFamily}}</button>
+      <button style="    font-size: 8px;width:100px" ion-button color="secondary">Unsched Treatment:
+        <br>{{val.UnScheduleTreatement}}</button>
+      <button style="    font-size: 10px;width:100px" ion-button color="dark">Balance:
+        <br>{{val.ARBalance}}</button>
+    </ion-item-options>
+    
+  </ion-item-sliding>
+  </ion-list>
+  <ion-row class="no-data" *ngIf="datastatus==false" >
+   <img src="assets/imgs/nodatafound.png">
+  </ion-row>
+  </ion-content>
