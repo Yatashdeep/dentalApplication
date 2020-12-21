@@ -41,6 +41,17 @@ page-stats {
         margin-top: 50px;
         overflow: visible;
     }
+    .name-detail{
+        height: 40px;
+        width: 40px;
+        background-color: grey;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin: 13px 4px 3px 18px;
+      }
     ion-icon {
         display: inline-block;
         font-size: .5em;
@@ -124,6 +135,10 @@ page-stats {
     }
     .line-style{
         justify-content: center;
+        text-align: center;
+    }
+    .center-col
+    {
         text-align: center;
     }
 

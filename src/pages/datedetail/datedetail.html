@@ -97,12 +97,12 @@
     <ion-col col-4 style="    justify-content: center;
     display: flex;">
          <div class="name-detail">
-           <p>SP</p>
+           <p>{{val.patID.charAt(0)}}</p>
          </div>
     </ion-col>
     <ion-col (click)="navigatetoStats(i)" col-4 style="    margin-left: -79px;">
-        <p>Patient-Id:{{val.patid}}</p>
-        <p>Amount:{{val.appointmentType}}</p>
+        <p>{{val.patID}}</p>
+        <p>${{val.amt}}</p>
         <p>Last 2BMW:{{val.LAST_2BW}}</p>
         <p>Last 4BMW:{{val.LAST_4BW}}</p>
         <p>Last FMX:{{val.LAST_FMX}}</p>

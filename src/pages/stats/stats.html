@@ -1,9 +1,44 @@
 <ion-header>
 
     <ion-navbar>
-      <ion-title>Stats</ion-title>
+      <ion-title>Patient Card</ion-title>
     </ion-navbar>
-  
+  <ion-toolbar color="primary">
+    <ion-title>
+   <ion-row>
+     <ion-col class="center-col">
+        <div class="name-detail">
+         <p>{{data.patID.charAt(0)}}</p>
+        </div>
+     </ion-col>
+     <ion-col class="center-col">
+      
+         <p>{{data.patID}}</p>
+       
+     </ion-col>
+     <ion-col class="center-col">
+        <p>{{data.Active}}</p>
+     </ion-col>
+     <ion-col class="center-col">
+        <p>{{data.gender}}</p>
+     </ion-col>
+   <!-- </ion-row>
+   <ion-row> -->
+     
+       </ion-row>
+   <ion-row>
+      <ion-col class="center-col">
+          <p>{{data.PatBirthday}}</p>
+      </ion-col>
+      <ion-col class="center-col">
+          <p>{{data.birthdate}}</p>
+      </ion-col>
+      <ion-col class="center-col">
+          <p>{{data.patid}}</p>
+      </ion-col>
+    </ion-row>
+    </ion-title>
+  </ion-toolbar>
   </ion-header>
   
   
@@ -12,6 +47,7 @@
 
 
 <ion-grid>
+
     <ion-row>
     <ion-col>
     
@@ -59,7 +95,7 @@
                <p class="b-tag">{{data.next_visit}}</p>
               </ion-row>
               <ion-row class="total-head">
-                <p class="normal-tag">Type:Hygiene</p>
+                <p class="normal-tag"></p>
               </ion-row>
            
       
@@ -84,10 +120,10 @@
                 <p class="p-tag">Hygiene Due</p>
               </ion-row>
               <ion-row class="line-style">
-               <p class="b-tag">{{data.FeagureHygine}}</p>
+               <p class="b-tag">{{data.HygieneDueDate}}</p>
               </ion-row>
               <ion-row class="total-head">
-                <p class="normal-tag">Scheduled:{{data.last_visit}}0</p>
+                <p class="normal-tag">{{data.next_visit}}</p>
               </ion-row>
            
       
@@ -136,10 +172,10 @@
                     <p class="p-tag">Remaining Insurance</p>
                   </ion-row>
                   <ion-row class="line-style">
-                   <p class="b-tag">$0</p>
+                   <p class="b-tag">{{data.RemaniningInsurance}}</p>
                   </ion-row>
                   <ion-row class="total-head">
-                    <p class="normal-tag">DELTA DELTAL OF ILLINOIS</p>
+                    <p class="normal-tag">{{data.PrimClmInsName}}</p>
                   </ion-row>
                
           
@@ -165,7 +201,7 @@
                   </ion-row>
                  
                   <ion-row class="total-head">
-                    <p class="b-tag">$0</p>
+                    <p class="b-tag">${{data.TreatmentPlan}}</p>
                   </ion-row>
                
           
